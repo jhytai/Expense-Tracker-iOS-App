@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Evl-y2-iS9">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -46,6 +46,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="Cfe-lG-Kn2" id="k84-ld-QYX"/>
                         <outlet property="passwordTextField" destination="0DW-Sx-jJb" id="yGB-5A-h2B"/>
+                        <segue destination="m8J-Sf-vD3" kind="show" identifier="goToNext" id="GPg-xp-wUd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F3p-j8-bzY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -89,43 +90,12 @@
                     <connections>
                         <outlet property="emailTextField" destination="1Kq-ZU-Bnn" id="i12-ie-WHK"/>
                         <outlet property="passwordTextField" destination="lal-Gn-nL3" id="2Yx-rj-XX8"/>
+                        <segue destination="m8J-Sf-vD3" kind="show" identifier="goToNext" id="ZBh-Je-HHw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6BA-Si-waF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2907.6335877862593" y="203.52112676056339"/>
-        </scene>
-        <!--Expenses-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Expense_Tracker" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Expenses" id="y3j-C4-MYx"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="7054.1984732824421" y="-35.211267605633807"/>
-        </scene>
-        <!--Categories-->
-        <scene sceneID="paM-KS-Pft">
-            <objects>
-                <viewController id="7Dg-fd-cq4" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Vzz-6X-MnA">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="dAX-FX-h3j"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Categories" id="CGk-h6-dVp"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0Va-FL-Iy1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="7776.3358778625952" y="-35.211267605633807"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="B5r-cw-eTe">
@@ -182,7 +152,26 @@
             </objects>
             <point key="canvasLocation" x="1156.4885496183206" y="-35.211267605633807"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="eda-F8-jIa">
+            <objects>
+                <viewController id="m8J-Sf-vD3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="09x-06-LJ9">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="I4S-sE-Hhi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2uG-ba-mth"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mgY-CE-dnp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3821" y="-35"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ZBh-Je-HHw"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

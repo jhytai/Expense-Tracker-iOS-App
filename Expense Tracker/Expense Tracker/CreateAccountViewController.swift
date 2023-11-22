@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class CreateAccountViewController: UIViewController {
 
@@ -19,6 +20,16 @@ class CreateAccountViewController: UIViewController {
     
 
     @IBAction func signupClicked(_ sender: UIButton) {
+        guard let email = emailTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        
+        Auth.auth().createUser(withEmail: email, password: password) { firebaseResult, error in
+            if let e = error {
+                print("Error creating user: \(e.localizedDescription)")
+            } else {
+                self.performSegue(withIdentifier: "goToNext", sender: self)
+            }
+        }
     }
     /*
     // MARK: - Navigation
