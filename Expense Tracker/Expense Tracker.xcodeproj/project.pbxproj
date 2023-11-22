@@ -16,6 +16,8 @@
 		0A6D62E42B074253003F869A /* Expense_TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6D62E32B074253003F869A /* Expense_TrackerTests.swift */; };
 		0A6D62EE2B074253003F869A /* Expense_TrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6D62ED2B074253003F869A /* Expense_TrackerUITests.swift */; };
 		0A6D62F02B074253003F869A /* Expense_TrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6D62EF2B074253003F869A /* Expense_TrackerUITestsLaunchTests.swift */; };
+		0AB3B1AB2B0DFD880071598D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB3B1AA2B0DFD880071598D /* LoginViewController.swift */; };
+		0AB3B1AD2B0DFED70071598D /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB3B1AC2B0DFED70071598D /* CreateAccountViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		0A6D62E92B074253003F869A /* Expense TrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Expense TrackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A6D62ED2B074253003F869A /* Expense_TrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense_TrackerUITests.swift; sourceTree = "<group>"; };
 		0A6D62EF2B074253003F869A /* Expense_TrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense_TrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0AB3B1AA2B0DFD880071598D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0AB3B1AC2B0DFED70071598D /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				0A6D62CE2B074252003F869A /* SceneDelegate.swift */,
 				0A6D62D02B074252003F869A /* ViewController.swift */,
 				0A6D62D22B074252003F869A /* Main.storyboard */,
+				0AB3B1AC2B0DFED70071598D /* CreateAccountViewController.swift */,
+				0AB3B1AA2B0DFD880071598D /* LoginViewController.swift */,
 				0A6D62D52B074253003F869A /* Assets.xcassets */,
 				0A6D62D72B074253003F869A /* LaunchScreen.storyboard */,
 				0A6D62DA2B074253003F869A /* Info.plist */,
@@ -258,6 +264,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AB3B1AD2B0DFED70071598D /* CreateAccountViewController.swift in Sources */,
+				0AB3B1AB2B0DFD880071598D /* LoginViewController.swift in Sources */,
 				0A6D62D12B074252003F869A /* ViewController.swift in Sources */,
 				0A6D62CD2B074252003F869A /* AppDelegate.swift in Sources */,
 				0A6D62CF2B074252003F869A /* SceneDelegate.swift in Sources */,
