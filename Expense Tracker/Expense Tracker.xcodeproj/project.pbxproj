@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		05BED47E2B12282500B67E69 /* TrackExpensesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BED47D2B12282500B67E69 /* TrackExpensesController.swift */; };
+		0A1C2B402B13FF310010512A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0A1C2B3E2B13FF310010512A /* Model.xcdatamodeld */; };
 		0A6D62CD2B074252003F869A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6D62CC2B074252003F869A /* AppDelegate.swift */; };
 		0A6D62CF2B074252003F869A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6D62CE2B074252003F869A /* SceneDelegate.swift */; };
 		0A6D62D12B074252003F869A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6D62D02B074252003F869A /* ViewController.swift */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		05BED47D2B12282500B67E69 /* TrackExpensesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackExpensesController.swift; sourceTree = "<group>"; };
+		0A1C2B3F2B13FF310010512A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		0A6D62C92B074252003F869A /* Expense Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Expense Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A6D62CC2B074252003F869A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A6D62CE2B074252003F869A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 		0A6D62C02B074252003F869A = {
 			isa = PBXGroup;
 			children = (
+				0A1C2B3E2B13FF310010512A /* Model.xcdatamodeld */,
 				0A6D62CB2B074252003F869A /* Expense Tracker */,
 				0A6D62E22B074253003F869A /* Expense TrackerTests */,
 				0A6D62EC2B074253003F869A /* Expense TrackerUITests */,
@@ -294,6 +297,7 @@
 				30F065F02B1353BA00E1192D /* History.swift in Sources */,
 				0AB3B1AB2B0DFD880071598D /* LoginViewController.swift in Sources */,
 				0A6D62D12B074252003F869A /* ViewController.swift in Sources */,
+				0A1C2B402B13FF310010512A /* Model.xcdatamodeld in Sources */,
 				0A6D62CD2B074252003F869A /* AppDelegate.swift in Sources */,
 				0A6D62CF2B074252003F869A /* SceneDelegate.swift in Sources */,
 				30F065EE2B1353A200E1192D /* Expenses.swift in Sources */,
@@ -657,6 +661,19 @@
 			productName = FirebaseAuth;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		0A1C2B3E2B13FF310010512A /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0A1C2B3F2B13FF310010512A /* Model.xcdatamodel */,
+			);
+			currentVersion = 0A1C2B3F2B13FF310010512A /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0A6D62C12B074252003F869A /* Project object */;
 }
