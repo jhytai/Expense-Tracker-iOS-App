@@ -21,6 +21,8 @@
 		0AB3B1AD2B0DFED70071598D /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB3B1AC2B0DFED70071598D /* CreateAccountViewController.swift */; };
 		0AB3B1AF2B0E02EB0071598D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0AB3B1AE2B0E02EB0071598D /* GoogleService-Info.plist */; };
 		0AB3B1B22B0E03EF0071598D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0AB3B1B12B0E03EF0071598D /* FirebaseAuth */; };
+		30F065EE2B1353A200E1192D /* Expenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F065ED2B1353A200E1192D /* Expenses.swift */; };
+		30F065F02B1353BA00E1192D /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F065EF2B1353BA00E1192D /* History.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		0AB3B1AA2B0DFD880071598D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0AB3B1AC2B0DFED70071598D /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		0AB3B1AE2B0E02EB0071598D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		30F065ED2B1353A200E1192D /* Expenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expenses.swift; sourceTree = "<group>"; };
+		30F065EF2B1353BA00E1192D /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,8 +118,10 @@
 				0A6D62D72B074253003F869A /* LaunchScreen.storyboard */,
 				0A6D62D22B074252003F869A /* Main.storyboard */,
 				0A6D62D02B074252003F869A /* ViewController.swift */,
-				0AB3B1AC2B0DFED70071598D /* CreateAccountViewController.swift */,
 				0AB3B1AA2B0DFD880071598D /* LoginViewController.swift */,
+				0AB3B1AC2B0DFED70071598D /* CreateAccountViewController.swift */,
+				30F065ED2B1353A200E1192D /* Expenses.swift */,
+				30F065EF2B1353BA00E1192D /* History.swift */,
 				05BED47D2B12282500B67E69 /* TrackExpensesController.swift */,
 				0A6D62D52B074253003F869A /* Assets.xcassets */,
 				0A6D62DA2B074253003F869A /* Info.plist */,
@@ -281,10 +287,12 @@
 			files = (
 				05BED47E2B12282500B67E69 /* TrackExpensesController.swift in Sources */,
 				0AB3B1AD2B0DFED70071598D /* CreateAccountViewController.swift in Sources */,
+				30F065F02B1353BA00E1192D /* History.swift in Sources */,
 				0AB3B1AB2B0DFD880071598D /* LoginViewController.swift in Sources */,
 				0A6D62D12B074252003F869A /* ViewController.swift in Sources */,
 				0A6D62CD2B074252003F869A /* AppDelegate.swift in Sources */,
 				0A6D62CF2B074252003F869A /* SceneDelegate.swift in Sources */,
+				30F065EE2B1353A200E1192D /* Expenses.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
