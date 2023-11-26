@@ -111,15 +111,15 @@
 			children = (
 				0A6D62CC2B074252003F869A /* AppDelegate.swift */,
 				0A6D62CE2B074252003F869A /* SceneDelegate.swift */,
-				0A6D62D02B074252003F869A /* ViewController.swift */,
+				0A6D62D72B074253003F869A /* LaunchScreen.storyboard */,
 				0A6D62D22B074252003F869A /* Main.storyboard */,
+				0A6D62D02B074252003F869A /* ViewController.swift */,
 				0AB3B1AC2B0DFED70071598D /* CreateAccountViewController.swift */,
 				0AB3B1AA2B0DFD880071598D /* LoginViewController.swift */,
+				05BED47D2B12282500B67E69 /* TrackExpensesController.swift */,
 				0A6D62D52B074253003F869A /* Assets.xcassets */,
-				0A6D62D72B074253003F869A /* LaunchScreen.storyboard */,
 				0A6D62DA2B074253003F869A /* Info.plist */,
 				0AB3B1AE2B0E02EB0071598D /* GoogleService-Info.plist */,
-				05BED47D2B12282500B67E69 /* TrackExpensesController.swift */,
 			);
 			path = "Expense Tracker";
 			sourceTree = "<group>";
@@ -465,10 +465,9 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Expense Tracker/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -494,10 +493,9 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Expense Tracker/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
