@@ -32,6 +32,7 @@ class CreateAccountViewController: UIViewController
                 self.performSegue(withIdentifier: "goToNext", sender: self)
             }
         }
+        print("Successfully created account!")
     }
 
     func setBackGround()

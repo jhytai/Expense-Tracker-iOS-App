@@ -32,6 +32,8 @@ class LoginViewController: UIViewController
                 self.performSegue(withIdentifier: "goToNext", sender: self)
             }
         }
+        print("Successfully logged in!")
+        
     }
 
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer)

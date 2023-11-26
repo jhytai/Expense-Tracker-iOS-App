@@ -21,6 +21,7 @@
 		0AB3B1AD2B0DFED70071598D /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB3B1AC2B0DFED70071598D /* CreateAccountViewController.swift */; };
 		0AB3B1AF2B0E02EB0071598D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0AB3B1AE2B0E02EB0071598D /* GoogleService-Info.plist */; };
 		0AB3B1B22B0E03EF0071598D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0AB3B1B12B0E03EF0071598D /* FirebaseAuth */; };
+		0DAD8CFC2B13D4360042BB9F /* cha ching.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0DAD8CFB2B13D4350042BB9F /* cha ching.mp3 */; };
 		30F065EE2B1353A200E1192D /* Expenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F065ED2B1353A200E1192D /* Expenses.swift */; };
 		30F065F02B1353BA00E1192D /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F065EF2B1353BA00E1192D /* History.swift */; };
 /* End PBXBuildFile section */
@@ -60,6 +61,7 @@
 		0AB3B1AA2B0DFD880071598D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0AB3B1AC2B0DFED70071598D /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		0AB3B1AE2B0E02EB0071598D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0DAD8CFB2B13D4350042BB9F /* cha ching.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "cha ching.mp3"; path = "../../../../../Downloads/cha ching.mp3"; sourceTree = "<group>"; };
 		30F065ED2B1353A200E1192D /* Expenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expenses.swift; sourceTree = "<group>"; };
 		30F065EF2B1353BA00E1192D /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,6 +115,7 @@
 		0A6D62CB2B074252003F869A /* Expense Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				0DAD8CFB2B13D4350042BB9F /* cha ching.mp3 */,
 				0A6D62CC2B074252003F869A /* AppDelegate.swift */,
 				0A6D62CE2B074252003F869A /* SceneDelegate.swift */,
 				0A6D62D72B074253003F869A /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 				0AB3B1AF2B0E02EB0071598D /* GoogleService-Info.plist in Resources */,
 				0A6D62D62B074253003F869A /* Assets.xcassets in Resources */,
 				0A6D62D42B074252003F869A /* Main.storyboard in Resources */,
+				0DAD8CFC2B13D4360042BB9F /* cha ching.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
