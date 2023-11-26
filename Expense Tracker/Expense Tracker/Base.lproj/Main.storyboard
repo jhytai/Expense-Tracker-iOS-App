@@ -33,7 +33,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cfe-lG-Kn2">
                                 <rect key="frame" x="118" y="153" width="157" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0DW-Sx-jJb">
                                 <rect key="frame" x="132.66666666666666" y="237" width="127.99999999999997" height="34"/>
@@ -43,6 +43,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pSx-32-zQA"/>
                         <color key="backgroundColor" systemColor="systemMintColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="0DW-Sx-jJb" firstAttribute="centerX" secondItem="v65-Gr-gP0" secondAttribute="centerX" id="4nj-gg-phY"/>
                             <constraint firstItem="0DW-Sx-jJb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="pSx-32-zQA" secondAttribute="leading" constant="50" id="6QQ-O9-2Cv"/>
@@ -55,6 +56,9 @@
                             <constraint firstItem="Cfe-lG-Kn2" firstAttribute="top" secondItem="pSx-32-zQA" secondAttribute="top" constant="50" id="kD3-wa-w0L"/>
                             <constraint firstItem="pSx-32-zQA" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Cfe-lG-Kn2" secondAttribute="trailing" constant="50" id="t3p-iY-Dc4"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="oGX-Eu-Vve" appends="YES" id="jkC-u9-ba0"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="1xC-87-Uip"/>
                     <connections>
@@ -64,6 +68,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F3p-j8-bzY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="oGX-Eu-Vve">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="Hzm-2Q-hqj" id="Ooi-pe-8nJ"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2907.6335877862593" y="-536.61971830985919"/>
         </scene>
@@ -92,7 +101,7 @@
                                 <rect key="frame" x="118" y="153" width="157" height="34"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lal-Gn-nL3">
                                 <rect key="frame" x="132.66666666666666" y="237" width="127.99999999999997" height="34"/>
@@ -103,6 +112,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zCU-V8-siB"/>
                         <color key="backgroundColor" systemColor="systemMintColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Q7h-IR-T1v" firstAttribute="top" secondItem="lal-Gn-nL3" secondAttribute="bottom" constant="50" id="6Jo-zj-yIZ"/>
                             <constraint firstItem="zCU-V8-siB" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lal-Gn-nL3" secondAttribute="trailing" constant="50" id="89B-gQ-gcu"/>
@@ -115,6 +125,9 @@
                             <constraint firstItem="lal-Gn-nL3" firstAttribute="top" secondItem="1Kq-ZU-Bnn" secondAttribute="bottom" constant="50" id="xN1-kR-dyM"/>
                             <constraint firstItem="1Kq-ZU-Bnn" firstAttribute="top" secondItem="zCU-V8-siB" secondAttribute="top" constant="50" id="yUX-eg-fAi"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="p9h-TE-9gk" appends="YES" id="9kh-pe-usy"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="n3e-uY-lKc"/>
                     <connections>
@@ -124,6 +137,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6BA-Si-waF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="p9h-TE-9gk">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="9G2-HS-BWi" id="kvf-gM-xdS"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2907.6335877862593" y="203.52112676056339"/>
         </scene>
@@ -378,7 +396,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Programmatic View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMQ-ya-iMP">
-                                <rect key="frame" x="122" y="272" width="149" height="21"/>
+                                <rect key="frame" x="122" y="416" width="149" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>

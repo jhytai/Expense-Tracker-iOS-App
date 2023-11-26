@@ -34,6 +34,13 @@ class LoginViewController: UIViewController
         }
     }
 
+    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer)
+        {
+        self.emailTextField.resignFirstResponder()
+        self.passwordTextField.resignFirstResponder()
+        print("Background tapped!")
+        }
+
     /*
     // MARK: - Navigation
 
