@@ -63,6 +63,7 @@
                     <navigationItem key="navigationItem" id="1xC-87-Uip"/>
                     <connections>
                         <outlet property="emailTextField" destination="Cfe-lG-Kn2" id="k84-ld-QYX"/>
+                        <outlet property="loginSubmit" destination="Lgb-W6-ZtJ" id="dUd-Sh-8aD"/>
                         <outlet property="passwordTextField" destination="0DW-Sx-jJb" id="yGB-5A-h2B"/>
                         <segue destination="78w-2h-fdd" kind="show" identifier="goToNext" id="GPg-xp-wUd"/>
                     </connections>
@@ -131,6 +132,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="n3e-uY-lKc"/>
                     <connections>
+                        <outlet property="createSubmit" destination="Q7h-IR-T1v" id="va3-nP-asK"/>
                         <outlet property="emailTextField" destination="1Kq-ZU-Bnn" id="i12-ie-WHK"/>
                         <outlet property="passwordTextField" destination="lal-Gn-nL3" id="2Yx-rj-XX8"/>
                         <segue destination="78w-2h-fdd" kind="show" identifier="goToNext" id="ZBh-Je-HHw"/>
@@ -247,15 +249,128 @@
                     <view key="view" contentMode="scaleToFill" id="09x-06-LJ9">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Expense" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jra-bw-dLw" userLabel="Page Title Label">
+                                <rect key="frame" x="117" y="108" width="159" height="33.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expense Title" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cB-IZ-onq" userLabel="Title Label">
+                                <rect key="frame" x="142.66666666666666" y="166.66666666666666" width="107.66666666666666" height="21.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="your expense title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tel-Ig-tJ6" userLabel="Title Text Field">
+                                <rect key="frame" x="118.33333333333333" y="208.33333333333334" width="156.66666666666669" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sb8-bO-YVM" userLabel="Category Label">
+                                <rect key="frame" x="159.66666666666666" y="267.33333333333331" width="74" height="21.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="your expense category" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iZJ-yv-hz0" userLabel="Category Text Field">
+                                <rect key="frame" x="99.666666666666671" y="309" width="193.66666666666663" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cc-0w-FJs" userLabel="Amount Label">
+                                <rect key="frame" x="165" y="368" width="63.333333333333343" height="21.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="your expense amount" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nwt-og-8KO" userLabel="Amount Text Field">
+                                <rect key="frame" x="104.66666666666669" y="409.66666666666669" width="184" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nUJ-H7-0Cn" userLabel="Date Label">
+                                <rect key="frame" x="177.66666666666666" y="468.66666666666669" width="38" height="21.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="center" contentHorizontalAlignment="leading" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="MLi-89-yg7">
+                                <rect key="frame" x="50" y="510.33333333333326" width="293" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="q04-Z8-Nc3"/>
+                                </constraints>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVy-4Q-O6H" userLabel="Submit Button">
+                                <rect key="frame" x="123" y="685.33333333333337" width="147" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Submit Expense"/>
+                                <connections>
+                                    <action selector="submitExpTapped:" destination="m8J-Sf-vD3" eventType="touchUpInside" id="ita-pA-c7Z"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="I4S-sE-Hhi"/>
                         <color key="backgroundColor" red="0.65490196079999996" green="0.85882352939999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="nUJ-H7-0Cn" firstAttribute="top" secondItem="nwt-og-8KO" secondAttribute="bottom" constant="25" id="2gE-1w-p91"/>
+                            <constraint firstItem="iZJ-yv-hz0" firstAttribute="top" secondItem="Sb8-bO-YVM" secondAttribute="bottom" constant="20" id="3FT-73-G8K"/>
+                            <constraint firstItem="I4S-sE-Hhi" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Jra-bw-dLw" secondAttribute="trailing" constant="20" id="5VG-1s-f8c"/>
+                            <constraint firstItem="I4S-sE-Hhi" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8cc-0w-FJs" secondAttribute="trailing" constant="20" id="DQF-ER-Wjh"/>
+                            <constraint firstItem="I4S-sE-Hhi" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Sb8-bO-YVM" secondAttribute="trailing" constant="20" id="ETR-71-yjR"/>
+                            <constraint firstItem="nUJ-H7-0Cn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I4S-sE-Hhi" secondAttribute="leading" constant="20" id="Epi-VV-Vfa"/>
+                            <constraint firstItem="tel-Ig-tJ6" firstAttribute="centerX" secondItem="09x-06-LJ9" secondAttribute="centerX" id="GQZ-F7-VCt"/>
+                            <constraint firstItem="0cB-IZ-onq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I4S-sE-Hhi" secondAttribute="leading" constant="20" id="GaK-pg-7AM"/>
+                            <constraint firstItem="Jra-bw-dLw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I4S-sE-Hhi" secondAttribute="leading" constant="20" id="I7P-Dj-vga"/>
+                            <constraint firstItem="iZJ-yv-hz0" firstAttribute="centerX" secondItem="09x-06-LJ9" secondAttribute="centerX" id="Iop-Ku-RTU"/>
+                            <constraint firstItem="0cB-IZ-onq" firstAttribute="centerX" secondItem="09x-06-LJ9" secondAttribute="centerX" id="LNZ-Po-fBi"/>
+                            <constraint firstItem="iZJ-yv-hz0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I4S-sE-Hhi" secondAttribute="leading" constant="20" id="Mca-WI-C9t"/>
+                            <constraint firstItem="I4S-sE-Hhi" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0cB-IZ-onq" secondAttribute="trailing" constant="20" id="O8N-mQ-bZB"/>
+                            <constraint firstItem="nwt-og-8KO" firstAttribute="top" secondItem="8cc-0w-FJs" secondAttribute="bottom" constant="20" id="PfP-Nk-1lS"/>
+                            <constraint firstItem="I4S-sE-Hhi" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="MLi-89-yg7" secondAttribute="trailing" constant="50" id="QSA-l2-ZA0"/>
+                            <constraint firstItem="lVy-4Q-O6H" firstAttribute="top" secondItem="MLi-89-yg7" secondAttribute="bottom" constant="25" id="RGo-uq-pbd"/>
+                            <constraint firstItem="Sb8-bO-YVM" firstAttribute="top" secondItem="tel-Ig-tJ6" secondAttribute="bottom" constant="25" id="Rms-uc-ELv"/>
+                            <constraint firstItem="Sb8-bO-YVM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I4S-sE-Hhi" secondAttribute="leading" constant="20" id="ThC-wI-HLs"/>
+                            <constraint firstItem="MLi-89-yg7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I4S-sE-Hhi" secondAttribute="leading" constant="50" id="Uep-0W-7s6"/>
+                            <constraint firstItem="Jra-bw-dLw" firstAttribute="centerX" secondItem="09x-06-LJ9" secondAttribute="centerX" id="ZEJ-C4-IKn"/>
+                            <constraint firstItem="I4S-sE-Hhi" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nwt-og-8KO" secondAttribute="trailing" constant="20" id="cEh-5n-Jb8"/>
+                            <constraint firstItem="MLi-89-yg7" firstAttribute="centerX" secondItem="09x-06-LJ9" secondAttribute="centerX" id="chQ-eI-PyM"/>
+                            <constraint firstItem="tel-Ig-tJ6" firstAttribute="top" secondItem="0cB-IZ-onq" secondAttribute="bottom" constant="20" id="dkj-Iv-0zV"/>
+                            <constraint firstItem="8cc-0w-FJs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I4S-sE-Hhi" secondAttribute="leading" constant="20" id="f2P-84-oMh"/>
+                            <constraint firstItem="8cc-0w-FJs" firstAttribute="centerX" secondItem="09x-06-LJ9" secondAttribute="centerX" id="fch-1Y-CzY"/>
+                            <constraint firstItem="lVy-4Q-O6H" firstAttribute="centerX" secondItem="09x-06-LJ9" secondAttribute="centerX" id="g2Y-Kn-U2y"/>
+                            <constraint firstItem="nwt-og-8KO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I4S-sE-Hhi" secondAttribute="leading" constant="20" id="gZe-j0-sSz"/>
+                            <constraint firstItem="I4S-sE-Hhi" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nUJ-H7-0Cn" secondAttribute="trailing" constant="20" id="hG8-mr-lmY"/>
+                            <constraint firstItem="nUJ-H7-0Cn" firstAttribute="centerX" secondItem="09x-06-LJ9" secondAttribute="centerX" id="hfX-3S-s1g"/>
+                            <constraint firstItem="0cB-IZ-onq" firstAttribute="top" secondItem="Jra-bw-dLw" secondAttribute="bottom" constant="25" id="l19-bd-xXn"/>
+                            <constraint firstItem="Jra-bw-dLw" firstAttribute="top" secondItem="I4S-sE-Hhi" secondAttribute="top" constant="5" id="m6D-Nj-2ni"/>
+                            <constraint firstItem="I4S-sE-Hhi" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tel-Ig-tJ6" secondAttribute="trailing" constant="20" id="mL2-By-yXj"/>
+                            <constraint firstItem="Sb8-bO-YVM" firstAttribute="centerX" secondItem="09x-06-LJ9" secondAttribute="centerX" id="pQS-8T-Syl"/>
+                            <constraint firstItem="8cc-0w-FJs" firstAttribute="top" secondItem="iZJ-yv-hz0" secondAttribute="bottom" constant="25" id="qGQ-8i-E8w"/>
+                            <constraint firstItem="tel-Ig-tJ6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I4S-sE-Hhi" secondAttribute="leading" constant="20" id="tbj-VA-KkT"/>
+                            <constraint firstItem="nwt-og-8KO" firstAttribute="centerX" secondItem="09x-06-LJ9" secondAttribute="centerX" id="wGb-MF-xwC"/>
+                            <constraint firstItem="MLi-89-yg7" firstAttribute="top" secondItem="nUJ-H7-0Cn" secondAttribute="bottom" constant="20" id="xSo-Eu-guh"/>
+                            <constraint firstItem="I4S-sE-Hhi" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="iZJ-yv-hz0" secondAttribute="trailing" constant="20" id="xep-D0-EBY"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Expenses" image="dollarsign" catalog="system" id="8w7-mV-9Yy"/>
                     <navigationItem key="navigationItem" id="2uG-ba-mth"/>
+                    <connections>
+                        <outlet property="expAmount" destination="nwt-og-8KO" id="eeM-wE-EQx"/>
+                        <outlet property="expAmountLabel" destination="8cc-0w-FJs" id="63c-4G-XMT"/>
+                        <outlet property="expCategory" destination="iZJ-yv-hz0" id="jbY-Hk-Ylv"/>
+                        <outlet property="expCategoryLabel" destination="Sb8-bO-YVM" id="VnM-M8-8uP"/>
+                        <outlet property="expDate" destination="MLi-89-yg7" id="dPB-w4-o5X"/>
+                        <outlet property="expDateLabel" destination="nUJ-H7-0Cn" id="yVO-AC-9YX"/>
+                        <outlet property="expPageTitle" destination="Jra-bw-dLw" id="Fqr-KS-aV8"/>
+                        <outlet property="expTitle" destination="tel-Ig-tJ6" id="bN6-b1-Oas"/>
+                        <outlet property="expTitleLabel" destination="0cB-IZ-onq" id="Amf-aM-VX0"/>
+                        <outlet property="submitButton" destination="lVy-4Q-O6H" id="Uwh-Dv-NI0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mgY-CE-dnp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4781" y="-349"/>
+            <point key="canvasLocation" x="4780.9160305343512" y="-349.29577464788736"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="3hf-k5-vOZ">
@@ -295,7 +410,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="GPg-xp-wUd"/>
+        <segue reference="ZBh-Je-HHw"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="ExpenseLogo" width="211" height="211"/>
