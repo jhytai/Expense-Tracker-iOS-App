@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05BED47E2B12282500B67E69 /* TrackExpensesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BED47D2B12282500B67E69 /* TrackExpensesController.swift */; };
 		0A1C2B402B13FF310010512A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0A1C2B3E2B13FF310010512A /* Model.xcdatamodeld */; };
 		0A6D62CD2B074252003F869A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6D62CC2B074252003F869A /* AppDelegate.swift */; };
 		0A6D62CF2B074252003F869A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6D62CE2B074252003F869A /* SceneDelegate.swift */; };
@@ -23,8 +22,8 @@
 		0AB3B1AF2B0E02EB0071598D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0AB3B1AE2B0E02EB0071598D /* GoogleService-Info.plist */; };
 		0AB3B1B22B0E03EF0071598D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0AB3B1B12B0E03EF0071598D /* FirebaseAuth */; };
 		0DAD8CFE2B13D6BE0042BB9F /* cha ching.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0DAD8CFD2B13D6BD0042BB9F /* cha ching.mp3 */; };
-		30F065EE2B1353A200E1192D /* Expenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F065ED2B1353A200E1192D /* Expenses.swift */; };
-		30F065F02B1353BA00E1192D /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F065EF2B1353BA00E1192D /* History.swift */; };
+		30F065EE2B1353A200E1192D /* ExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F065ED2B1353A200E1192D /* ExpensesViewController.swift */; };
+		30F065F02B1353BA00E1192D /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F065EF2B1353BA00E1192D /* HistoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +44,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		05BED47D2B12282500B67E69 /* TrackExpensesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackExpensesController.swift; sourceTree = "<group>"; };
 		0A1C2B3F2B13FF310010512A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		0A6D62C92B074252003F869A /* Expense Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Expense Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A6D62CC2B074252003F869A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,8 +62,8 @@
 		0AB3B1AC2B0DFED70071598D /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		0AB3B1AE2B0E02EB0071598D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0DAD8CFD2B13D6BD0042BB9F /* cha ching.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "cha ching.mp3"; sourceTree = "<group>"; };
-		30F065ED2B1353A200E1192D /* Expenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expenses.swift; sourceTree = "<group>"; };
-		30F065EF2B1353BA00E1192D /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		30F065ED2B1353A200E1192D /* ExpensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesViewController.swift; sourceTree = "<group>"; };
+		30F065EF2B1353BA00E1192D /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +116,6 @@
 		0A6D62CB2B074252003F869A /* Expense Tracker */ = {
 			isa = PBXGroup;
 			children = (
-				0DAD8CFD2B13D6BD0042BB9F /* cha ching.mp3 */,
 				0A6D62CC2B074252003F869A /* AppDelegate.swift */,
 				0A6D62CE2B074252003F869A /* SceneDelegate.swift */,
 				0A6D62D72B074253003F869A /* LaunchScreen.storyboard */,
@@ -126,10 +123,10 @@
 				0A6D62D02B074252003F869A /* ViewController.swift */,
 				0AB3B1AA2B0DFD880071598D /* LoginViewController.swift */,
 				0AB3B1AC2B0DFED70071598D /* CreateAccountViewController.swift */,
-				30F065ED2B1353A200E1192D /* Expenses.swift */,
-				30F065EF2B1353BA00E1192D /* History.swift */,
-				05BED47D2B12282500B67E69 /* TrackExpensesController.swift */,
+				30F065ED2B1353A200E1192D /* ExpensesViewController.swift */,
+				30F065EF2B1353BA00E1192D /* HistoryViewController.swift */,
 				0A6D62D52B074253003F869A /* Assets.xcassets */,
+				0DAD8CFD2B13D6BD0042BB9F /* cha ching.mp3 */,
 				0A6D62DA2B074253003F869A /* Info.plist */,
 				0AB3B1AE2B0E02EB0071598D /* GoogleService-Info.plist */,
 			);
@@ -292,15 +289,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05BED47E2B12282500B67E69 /* TrackExpensesController.swift in Sources */,
 				0AB3B1AD2B0DFED70071598D /* CreateAccountViewController.swift in Sources */,
-				30F065F02B1353BA00E1192D /* History.swift in Sources */,
+				30F065F02B1353BA00E1192D /* HistoryViewController.swift in Sources */,
 				0AB3B1AB2B0DFD880071598D /* LoginViewController.swift in Sources */,
 				0A6D62D12B074252003F869A /* ViewController.swift in Sources */,
 				0A1C2B402B13FF310010512A /* Model.xcdatamodeld in Sources */,
 				0A6D62CD2B074252003F869A /* AppDelegate.swift in Sources */,
 				0A6D62CF2B074252003F869A /* SceneDelegate.swift in Sources */,
-				30F065EE2B1353A200E1192D /* Expenses.swift in Sources */,
+				30F065EE2B1353A200E1192D /* ExpensesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

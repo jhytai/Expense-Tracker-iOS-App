@@ -6,14 +6,26 @@
 //
 
 import UIKit
+import AVKit
 
-class ViewController: UIViewController
-{
-
-    override func viewDidLoad()
-    {
+class ViewController: UIViewController {
+    
+    @IBOutlet var appTitleLabel   : UILabel!
+    @IBOutlet var appLogoImage    : UIImageView!
+    @IBOutlet var loginButton     : UIButton!
+    @IBOutlet var createAccButton : UIButton!
+    
+    override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
+    @IBAction func loginButtonTapped (_ sender: UIButton) {
+        print("Login button tapped!")
+    }
+    
+    @IBAction func createAccButtonTapped (_ sender: UIButton) {
+        print("Create account button tapped!")
+    }
+    
 }
