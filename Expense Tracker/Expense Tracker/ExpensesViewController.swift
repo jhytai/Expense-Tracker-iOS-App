@@ -7,13 +7,16 @@
 
 import UIKit
 
-class Expenses: UIViewController
+class ExpensesViewController: UIViewController
 {
 
-    override func viewDidLoad()
-    {
+    override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+
+//    override func loadView() {
+//        // Code here
+//    }
 
 }
