@@ -265,7 +265,10 @@
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="your expense title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tel-Ig-tJ6" userLabel="Title Text Field">
                                 <rect key="frame" x="118.33333333333333" y="208.33333333333334" width="156.66666666666669" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="namePhonePad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="m8J-Sf-vD3" id="0oX-De-yF7"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sb8-bO-YVM" userLabel="Category Label">
                                 <rect key="frame" x="159.66666666666666" y="267.33333333333331" width="74" height="21.666666666666686"/>
@@ -276,7 +279,10 @@
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="your expense category" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iZJ-yv-hz0" userLabel="Category Text Field">
                                 <rect key="frame" x="99.666666666666671" y="309" width="193.66666666666663" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="namePhonePad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="m8J-Sf-vD3" id="HRc-SC-AQE"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cc-0w-FJs" userLabel="Amount Label">
                                 <rect key="frame" x="165" y="368" width="63.333333333333343" height="21.666666666666686"/>
@@ -288,6 +294,9 @@
                                 <rect key="frame" x="104.66666666666669" y="409.66666666666669" width="184" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="m8J-Sf-vD3" id="vGN-nx-6aL"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nUJ-H7-0Cn" userLabel="Date Label">
                                 <rect key="frame" x="177.66666666666666" y="468.66666666666669" width="38" height="21.666666666666686"/>
@@ -312,6 +321,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="I4S-sE-Hhi"/>
                         <color key="backgroundColor" red="0.65490196079999996" green="0.85882352939999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="nUJ-H7-0Cn" firstAttribute="top" secondItem="nwt-og-8KO" secondAttribute="bottom" constant="25" id="2gE-1w-p91"/>
                             <constraint firstItem="iZJ-yv-hz0" firstAttribute="top" secondItem="Sb8-bO-YVM" secondAttribute="bottom" constant="20" id="3FT-73-G8K"/>
@@ -352,6 +362,9 @@
                             <constraint firstItem="MLi-89-yg7" firstAttribute="top" secondItem="nUJ-H7-0Cn" secondAttribute="bottom" constant="20" id="xSo-Eu-guh"/>
                             <constraint firstItem="I4S-sE-Hhi" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="iZJ-yv-hz0" secondAttribute="trailing" constant="20" id="xep-D0-EBY"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="NBl-1V-L0H" appends="YES" id="JUD-9y-B9d"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Expenses" image="dollarsign" catalog="system" id="8w7-mV-9Yy"/>
                     <navigationItem key="navigationItem" id="2uG-ba-mth"/>
@@ -369,6 +382,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mgY-CE-dnp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="NBl-1V-L0H">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="m8J-Sf-vD3" id="q5v-M7-nHy"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="4780.9160305343512" y="-349.29577464788736"/>
         </scene>

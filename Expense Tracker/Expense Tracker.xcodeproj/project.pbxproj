@@ -95,7 +95,6 @@
 		0A6D62C02B074252003F869A = {
 			isa = PBXGroup;
 			children = (
-				0A1C2B3E2B13FF310010512A /* Model.xcdatamodeld */,
 				0A6D62CB2B074252003F869A /* Expense Tracker */,
 				0A6D62E22B074253003F869A /* Expense TrackerTests */,
 				0A6D62EC2B074253003F869A /* Expense TrackerUITests */,
@@ -116,6 +115,7 @@
 		0A6D62CB2B074252003F869A /* Expense Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				0A1C2B3E2B13FF310010512A /* Model.xcdatamodeld */,
 				0A6D62CC2B074252003F869A /* AppDelegate.swift */,
 				0A6D62CE2B074252003F869A /* SceneDelegate.swift */,
 				0A6D62D72B074253003F869A /* LaunchScreen.storyboard */,
