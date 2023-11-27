@@ -6,48 +6,152 @@
 //
 
 import UIKit
+import AVKit
+import CoreData
 
-class ExpensesViewController: UIViewController {
+class ExpensesViewController: UIViewController, UITextFieldDelegate {
     
-    private var expPageTitle     : UILabel!
-    private var expTitleLabel    : UILabel!
-    private var expTitle         : UITextField!
-    private var expCategoryLabel : UILabel!
-    private var expCategory      : UITextField!
-    private var expAmountLabel   : UILabel!
-    private var expAmount        : UITextField!
-    private var expDateLabel     : UILabel!
-    private var expDate          : UITextField!
-    private var submitButton     : UIButton!
+    @IBOutlet var expPageTitle     : UILabel!
+    @IBOutlet var expTitleLabel    : UILabel!
+    @IBOutlet var expTitle         : UITextField!
+    @IBOutlet var expCategoryLabel : UILabel!
+    @IBOutlet var expCategory      : UITextField!
+    @IBOutlet var expAmountLabel   : UILabel!
+    @IBOutlet var expAmount        : UITextField!
+    @IBOutlet var expDateLabel     : UILabel!
+    @IBOutlet var expDate          : UIDatePicker!
+    @IBOutlet var submitButton     : UIButton!
+    
+    private   var audioPlayer      : AVAudioPlayer!
+    
+    let numberFormatter: NumberFormatter = {
+        let nf = NumberFormatter()
+        nf.numberStyle = .decimal
+        nf.minimumFractionDigits = 0
+        nf.maximumFractionDigits = 2
+        return nf
+        }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
-    override func loadView() {
-        super.loadView()
+    // Function to control and validate changes to Rounds Text Input Field
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let keyboardType = textField.keyboardType
         
-        // Initialize Expenses Page Title Label
-        self.expPageTitle = UILabel()
-        self.expPageTitle.text = "Add Expense"
-        self.expPageTitle.font = UIFont.systemFont(ofSize: 32)
-        self.expPageTitle.numberOfLines = 0
-        self.expPageTitle.lineBreakMode = .byWordWrapping
-        self.expPageTitle.textAlignment = .center
-        self.expPageTitle.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(expPageTitle)
-        
-        // Set up contraints
-        NSLayoutConstraint.activate([
-            // Constrain welcomeLabel
-            self.expPageTitle.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            self.expPageTitle.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),
-            self.expPageTitle.leadingAnchor.constraint(greaterThanOrEqualTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            self.expPageTitle.trailingAnchor.constraint(lessThanOrEqualTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+        if  keyboardType == .numberPad {
+            // Define character set that includes only numeric characters
+            let allowedCharacterSet = CharacterSet(charactersIn: "0123456789")
             
-            ])
+            // Check if the replacement string contains only the allowed characters
+            let characterSet = CharacterSet(charactersIn: string)
+            
+            // If only numeric digits, accept. Else, reject the replacement string
+            return allowedCharacterSet.isSuperset(of: characterSet)
+            }
+        else if keyboardType == .namePhonePad {
+            // Define character set that includes only letter characters and space
+            let allowedCharacterSet = CharacterSet.letters.union(CharacterSet(charactersIn: " "))
+            
+            // Iterate over string to make sure it only contains allowed characters
+            for c in string {
+                if !allowedCharacterSet.isSuperset(of: CharacterSet(charactersIn: String(c))) {
+                    // Prevent input of characters that are not letters or spaces
+                    return false
+                    }
+                }
+            }
+        else if keyboardType == .decimalPad {
+            if string.rangeOfCharacter(from: CharacterSet.letters) != nil
+                {
+                return false
+                }
+            
+            let currentLocale = Locale.current
+            let decimalSeparator = currentLocale.decimalSeparator ?? "."
+            let existingTextHasDecimalSeparator = textField.text?.range(of: decimalSeparator)
+            let replacementTextHasDecimalSeparator = string.range(of: decimalSeparator)
+            
+            if existingTextHasDecimalSeparator != nil, replacementTextHasDecimalSeparator != nil
+                {
+                return false
+                }
+            }
+        
+        return true
+        }
+    
+    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer)
+        {
+        self.expTitle.resignFirstResponder()
+        self.expCategory.resignFirstResponder()
+        self.expAmount.resignFirstResponder()
+        print("Background tapped!")
+        }
+    
+    @IBAction func submitExpTapped (_ sender: UIButton) {
+        print("Submit expense button tapped!")
+        
+        // Validate form data
+        guard let title = expTitle.text, !title.isEmpty,
+              let category = expCategory.text, !category.isEmpty,
+              let amountText = expAmount.text, let amount = Double(amountText),
+              amount > 0 else {
+            // Handle validation error
+            print("Validation failed.")
+            return
+        }
+        
+        // Get the managed object context
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        let context = appDelegate.persistentContainer.viewContext
+        
+        // Create a new expense record
+        let expense = ExpenseEntity(context: context)
+        expense.title = title
+        expense.category = category
+        expense.amount = amount
+        expense.date = expDate.date
+        
+        // Save the context
+        do  {
+            try context.save()
+            print("Expense saved.")
+        } catch {
+            print("Failed to save expense: \(error)")
+        }
+        
+        // Reset the form
+        resetForm()
+        
+        // Play audio feedback
+        playSubmitAudio()
     }
     
+    private func resetForm() {
+        expTitle.text = ""
+        expCategory.text = ""
+        expAmount.text = ""
+        expDate.date = Date()
+    }
+    
+    private func playSubmitAudio() {
+        if let audioPath = Bundle.main.path(forResource: "cha ching", ofType: "mp3") {
+            do  {
+                let audioURL = URL(fileURLWithPath: audioPath)
+                try self.audioPlayer = AVAudioPlayer(contentsOf: audioURL)
+                self.audioPlayer.volume = 10
+                self.audioPlayer.currentTime = 0
+                self.audioPlayer.prepareToPlay()
+                self.audioPlayer.play()
+            } catch {
+                print("Failed to play Banana_Slip sound.")
+            }
+        }
+    }
     
 }

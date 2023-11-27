@@ -22,7 +22,7 @@ class HistoryViewController: UIViewController {
         // Initialize Expenses Page Title Label
         self.histPageTitle = UILabel()
         self.histPageTitle.text = "Expenses History"
-        self.histPageTitle.font = UIFont.systemFont(ofSize: 32)
+        self.histPageTitle.font = UIFont.systemFont(ofSize: 28)
         self.histPageTitle.numberOfLines = 0
         self.histPageTitle.lineBreakMode = .byWordWrapping
         self.histPageTitle.textAlignment = .center
