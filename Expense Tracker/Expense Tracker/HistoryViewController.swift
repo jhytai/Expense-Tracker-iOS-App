@@ -33,7 +33,7 @@ class HistoryViewController: UIViewController {
         NSLayoutConstraint.activate([
             // Constrain welcomeLabel
             self.histPageTitle.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            self.histPageTitle.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),
+            self.histPageTitle.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 5),
             self.histPageTitle.leadingAnchor.constraint(greaterThanOrEqualTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
             self.histPageTitle.trailingAnchor.constraint(lessThanOrEqualTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
             

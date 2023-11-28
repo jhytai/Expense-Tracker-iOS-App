@@ -18,14 +18,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lgb-W6-ZtJ">
-                                <rect key="frame" x="146.66666666666666" y="321" width="100" height="35"/>
+                                <rect key="frame" x="146.66666666666666" y="321" width="100" height="35.666666666666686"/>
                                 <color key="backgroundColor" red="0.96078431369999995" green="0.95686274510000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="XZj-1P-UaM"/>
                                 </constraints>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Login"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Login">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                    <color key="baseBackgroundColor" systemColor="systemBlueColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="loginClicked:" destination="Hzm-2Q-hqj" eventType="touchUpInside" id="wVY-zG-qAn"/>
                                 </connections>
@@ -75,7 +78,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2908" y="-349"/>
+            <point key="canvasLocation" x="2908" y="-380"/>
         </scene>
         <!--Create Account View Controller-->
         <scene sceneID="5Xv-Lb-ljg">
@@ -86,14 +89,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7h-IR-T1v">
-                                <rect key="frame" x="106.66666666666669" y="321" width="180" height="35"/>
+                                <rect key="frame" x="106.66666666666669" y="321" width="180" height="35.666666666666686"/>
                                 <color key="backgroundColor" red="0.96078431369999995" green="0.95686274510000002" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="dO8-F0-ipo"/>
                                 </constraints>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Create Account"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Create Account">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                    <color key="baseBackgroundColor" red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="signupClicked:" destination="9G2-HS-BWi" eventType="touchUpInside" id="2HP-1B-dkV"/>
                                 </connections>
@@ -161,18 +167,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ExpenseLogo" translatesAutoresizingMaskIntoConstraints="NO" id="ekM-RE-XUL">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ExpenseLogo" translatesAutoresizingMaskIntoConstraints="NO" id="ekM-RE-XUL">
                                 <rect key="frame" x="100" y="345" width="193" height="193"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ekM-RE-XUL" secondAttribute="height" multiplier="1:1" id="nQI-89-sL3"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="mW2-Un-vQ8" appends="YES" id="koJ-9g-8mx"/>
+                                </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bBi-eW-SAf" userLabel="Login Button">
-                                <rect key="frame" x="144.66666666666666" y="588" width="103.66666666666666" height="51.333333333333371"/>
+                                <rect key="frame" x="149.66666666666666" y="588" width="93.666666666666657" height="46.666666666666629"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Login">
-                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Login">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="loginButtonTapped:" destination="Zqn-gZ-YWR" eventType="touchUpInside" id="ezh-ev-2dl"/>
@@ -180,10 +189,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLQ-Fu-Awc" userLabel="Create Account Button">
-                                <rect key="frame" x="73" y="659.33333333333337" width="247" height="51.333333333333371"/>
+                                <rect key="frame" x="87" y="659.66666666666663" width="219" height="46.666666666666629"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Create Account">
-                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Create Account">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="createAccButtonTapped:" destination="Zqn-gZ-YWR" eventType="touchUpInside" id="onY-P9-PO0"/>
@@ -207,7 +216,7 @@
                             <constraint firstItem="rLQ-Fu-Awc" firstAttribute="centerX" secondItem="uTH-Sw-X7W" secondAttribute="centerX" id="poj-Dt-gN4"/>
                             <constraint firstItem="ekM-RE-XUL" firstAttribute="top" secondItem="gi1-Uw-9Hr" secondAttribute="bottom" constant="50" id="r7M-Vr-iZw"/>
                             <constraint firstItem="bBi-eW-SAf" firstAttribute="top" secondItem="ekM-RE-XUL" secondAttribute="bottom" constant="50" id="txj-He-xYT"/>
-                            <constraint firstItem="rLQ-Fu-Awc" firstAttribute="top" secondItem="bBi-eW-SAf" secondAttribute="bottom" constant="20" id="uTj-ef-cya"/>
+                            <constraint firstItem="rLQ-Fu-Awc" firstAttribute="top" secondItem="bBi-eW-SAf" secondAttribute="bottom" constant="25" id="uTj-ef-cya"/>
                             <constraint firstItem="iRc-ok-tOv" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rLQ-Fu-Awc" secondAttribute="trailing" constant="50" id="usB-P4-KgU"/>
                         </constraints>
                     </view>
@@ -220,6 +229,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8eq-vy-RYK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="mW2-Un-vQ8">
+                    <connections>
+                        <action selector="logoTappedWith_sender:" destination="Zqn-gZ-YWR" id="Kmh-Wc-3mX"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2083.2061068702287" y="-35.211267605633807"/>
         </scene>
@@ -311,9 +325,11 @@
                                 </constraints>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVy-4Q-O6H" userLabel="Submit Button">
-                                <rect key="frame" x="123" y="685.33333333333337" width="147" height="35"/>
+                                <rect key="frame" x="119.66666666666667" y="685.33333333333337" width="153.66666666666663" height="35.666666666666629"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Submit Expense"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Submit Expense">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="submitExpTapped:" destination="m8J-Sf-vD3" eventType="touchUpInside" id="ita-pA-c7Z"/>
                                 </connections>
@@ -388,7 +404,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="4780.9160305343512" y="-349.29577464788736"/>
+            <point key="canvasLocation" x="4781" y="-380"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="3hf-k5-vOZ">
@@ -403,6 +419,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="m8J-Sf-vD3" kind="relationship" relationship="viewControllers" id="wvf-8N-Xzd"/>
+                        <segue destination="E6b-ws-G1D" kind="relationship" relationship="viewControllers" id="cSW-9I-3bo"/>
                         <segue destination="4ir-Ia-quP" kind="relationship" relationship="viewControllers" id="KSO-xg-wVF"/>
                     </connections>
                 </tabBarController>
@@ -426,6 +443,23 @@
             </objects>
             <point key="canvasLocation" x="4781" y="318"/>
         </scene>
+        <!--Category-->
+        <scene sceneID="scd-ve-qte">
+            <objects>
+                <viewController id="E6b-ws-G1D" userLabel="Category" customClass="CategoryViewController" customModule="Expense_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1SR-Xy-oa9">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Xpd-EF-wul"/>
+                        <color key="backgroundColor" red="0.65490196079999996" green="0.85882352939999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Category" image="list.bullet.indent" catalog="system" id="CVZ-Iv-DrF"/>
+                    <navigationItem key="navigationItem" id="4C5-6G-ps6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="piN-pz-KbW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5741" y="-35"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="ZBh-Je-HHw"/>
@@ -434,11 +468,15 @@
         <image name="ExpenseLogo" width="211" height="211"/>
         <image name="dollarsign" catalog="system" width="89" height="128"/>
         <image name="list.bullet.clipboard.fill" catalog="system" width="98" height="128"/>
+        <image name="list.bullet.indent" catalog="system" width="128" height="73"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
