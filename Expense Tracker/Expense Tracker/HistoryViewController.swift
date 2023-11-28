@@ -19,7 +19,7 @@ class HistoryViewController: UIViewController {
     override func loadView() {
         super.loadView()
         
-        // Initialize Expenses Page Title Label
+        // Initialize Expenses History Page Title Label
         self.histPageTitle = UILabel()
         self.histPageTitle.text = "Expenses History"
         self.histPageTitle.font = UIFont.systemFont(ofSize: 28)
@@ -31,7 +31,7 @@ class HistoryViewController: UIViewController {
         
         // Set up contraints
         NSLayoutConstraint.activate([
-            // Constrain welcomeLabel
+            // Constrain histPageTitle
             self.histPageTitle.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             self.histPageTitle.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 5),
             self.histPageTitle.leadingAnchor.constraint(greaterThanOrEqualTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),

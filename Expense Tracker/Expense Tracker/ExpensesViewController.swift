@@ -101,6 +101,13 @@ class ExpensesViewController: UIViewController, UITextFieldDelegate {
               amount > 0 else {
             // Handle validation error
             print("Validation failed.")
+            
+            let alert = UIAlertController(title: "Error: Invalid data in the form, or form is empty.",
+                message: "Please enter valid data in the form, then submit again.",
+                preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            
             return
         }
         
@@ -121,8 +128,22 @@ class ExpensesViewController: UIViewController, UITextFieldDelegate {
         do  {
             try context.save()
             print("Expense saved.")
+            
+            let alert = UIAlertController(title: "Successfully added new expense.",
+                message: "You can see the expenses in Category or History tab.",
+                preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            
         } catch {
             print("Failed to save expense: \(error)")
+            
+            let alert = UIAlertController(title: "Error: Failed to add expense.",
+                message: "Database is not accessible to save new expense entry.",
+                preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            
         }
         
         // Reset the form
@@ -149,7 +170,7 @@ class ExpensesViewController: UIViewController, UITextFieldDelegate {
                 self.audioPlayer.prepareToPlay()
                 self.audioPlayer.play()
             } catch {
-                print("Failed to play Banana_Slip sound.")
+                print("Failed to play cha-ching sound.")
             }
         }
     }
