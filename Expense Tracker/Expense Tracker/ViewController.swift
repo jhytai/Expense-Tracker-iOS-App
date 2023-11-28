@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
         setGradientBackground()
     }
     
@@ -57,7 +57,7 @@ class ViewController: UIViewController {
                 self.audioPlayer.prepareToPlay()
                 self.audioPlayer.play()
             } catch {
-                print("Failed to play Banana_Slip sound.")
+                print("Failed to play cha-ching sound.")
             }
         }
     }
