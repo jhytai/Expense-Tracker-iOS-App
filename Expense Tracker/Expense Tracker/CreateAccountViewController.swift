@@ -54,24 +54,4 @@ class CreateAccountViewController: UIViewController
         print("Background tapped!")
     }
     
-    //func setBackGround() {
-    //    let colorTop = UIColor(red: 132.0/255.0, green: 104.0/255.0, blue: 212.0/255.0, alpha: 1.0).cgColor
-    //    let colorBottom = UIColor(red: 39.0/255.0, green: 16.0/255.0, blue: 107.0/255.0, alpha: 1.0).cgColor
-    //
-    //    let gradientLayer = CAGradientLayer()
-    //    gradientLayer.colors = [colorTop, colorBottom]
-    //    gradientLayer.locations = [0.0, 1.0]
-    //    gradientLayer.frame = self.view.bounds
-    //}
-    
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
 }
