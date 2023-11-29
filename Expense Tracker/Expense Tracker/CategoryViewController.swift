@@ -141,6 +141,36 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         
         return cell
     }
+        
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // Retrieve the category and the expense to be deleted
+            let categoryData = expensesByCategory[indexPath.section]
+            let expenseToDelete = categoryData.expenses[indexPath.row]
+            
+            // Delete from Core Data
+            context.delete(expenseToDelete)
+            
+            do {
+                try context.save()
+                // Update your data source array
+                expensesByCategory[indexPath.section].expenses.remove(at: indexPath.row)
+                
+                // Check if the entire section should be deleted
+                if expensesByCategory[indexPath.section].expenses.isEmpty {
+                    expensesByCategory.remove(at: indexPath.section)
+                    tableView.deleteSections(IndexSet(integer: indexPath.section), with: .fade)
+                } else {
+                    // Delete the row from the table view
+                    tableView.deleteRows(at: [indexPath], with: .fade)
+                }
+            } catch {
+                // Handle the error, e.g., show an alert
+                print("Error deleting expense: \(error)")
+            }
+        }
+        fetchData()
+    }
     
     // MARK: - UITableViewDelegate Methods
     
