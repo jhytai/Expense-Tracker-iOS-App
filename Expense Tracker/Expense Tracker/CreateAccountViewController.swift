@@ -39,7 +39,7 @@ class CreateAccountViewController: UIViewController
                 print("Successfully created new account!")
                 
                 let alert = UIAlertController(title: "Successfully created new account.",
-                    message: "Welcome to Expense Tracker app.",
+                    message: "You can now login.",
                     preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                 self.present(alert, animated: true, completion: nil)

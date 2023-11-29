@@ -37,6 +37,9 @@
                                 <rect key="frame" x="118" y="153" width="157" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                <connections>
+                                    <action selector="emailTextFieldEdited:" destination="Hzm-2Q-hqj" eventType="editingChanged" id="yWP-YF-YRi"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0DW-Sx-jJb">
                                 <rect key="frame" x="132.66666666666666" y="237" width="127.99999999999997" height="34"/>
@@ -136,12 +139,17 @@
                             <outletCollection property="gestureRecognizers" destination="p9h-TE-9gk" appends="YES" id="9kh-pe-usy"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" id="n3e-uY-lKc"/>
+                    <navigationItem key="navigationItem" id="n3e-uY-lKc">
+                        <barButtonItem key="rightBarButtonItem" title="Login" id="Nqg-H0-iXF">
+                            <connections>
+                                <segue destination="Hzm-2Q-hqj" kind="show" identifier="goToNext" id="zPG-KO-xm0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="createSubmit" destination="Q7h-IR-T1v" id="va3-nP-asK"/>
                         <outlet property="emailTextField" destination="1Kq-ZU-Bnn" id="i12-ie-WHK"/>
                         <outlet property="passwordTextField" destination="lal-Gn-nL3" id="2Yx-rj-XX8"/>
-                        <segue destination="78w-2h-fdd" kind="show" identifier="goToNext" id="ZBh-Je-HHw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6BA-Si-waF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -279,7 +287,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="your expense title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tel-Ig-tJ6" userLabel="Title Text Field">
                                 <rect key="frame" x="118.33333333333333" y="208.33333333333334" width="156.66666666666669" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="namePhonePad"/>
+                                <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="m8J-Sf-vD3" id="0oX-De-yF7"/>
                                 </connections>
@@ -462,7 +470,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ZBh-Je-HHw"/>
+        <segue reference="zPG-KO-xm0"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="ExpenseLogo" width="211" height="211"/>
@@ -476,7 +484,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

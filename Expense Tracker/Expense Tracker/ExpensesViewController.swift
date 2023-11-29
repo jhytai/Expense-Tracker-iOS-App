@@ -23,6 +23,7 @@ class ExpensesViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var submitButton     : UIButton!
     
     private   var audioPlayer      : AVAudioPlayer!
+    public    var accEmail         : String = ""
     
     let numberFormatter: NumberFormatter = {
         let nf = NumberFormatter()
@@ -34,35 +35,36 @@ class ExpensesViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        // Pass accEmail to CategoryViewController
+        if let tabBarControllers = self.tabBarController?.viewControllers {
+            for viewController in tabBarControllers {
+                if let categoryVC = viewController as? CategoryViewController {
+                    categoryVC.accEmail = self.accEmail
+                }
+            }
+        }
+        
     }
     
     // Function to control and validate changes to Rounds Text Input Field
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let keyboardType = textField.keyboardType
         
-        if  keyboardType == .numberPad {
-            // Define character set that includes only numeric characters
-            let allowedCharacterSet = CharacterSet(charactersIn: "0123456789")
+        // Keyboard type "Name Phone Pad" for expense category text field
+        if keyboardType == .namePhonePad {
+            // Define character set that includes only letter characters
+            let allowedCharacterSet = CharacterSet.letters
             
-            // Check if the replacement string contains only the allowed characters
-            let characterSet = CharacterSet(charactersIn: string)
-            
-            // If only numeric digits, accept. Else, reject the replacement string
-            return allowedCharacterSet.isSuperset(of: characterSet)
-            }
-        else if keyboardType == .namePhonePad {
-            // Define character set that includes only letter characters and space
-            let allowedCharacterSet = CharacterSet.letters.union(CharacterSet(charactersIn: " "))
-            
-            // Iterate over string to make sure it only contains allowed characters
+            // Iterate over string to make sure it only contains letter characters
             for c in string {
                 if !allowedCharacterSet.isSuperset(of: CharacterSet(charactersIn: String(c))) {
-                    // Prevent input of characters that are not letters or spaces
+                    // Prevent input on non letter characters
                     return false
                     }
                 }
             }
+        // Keyboard type "Decimal Pad" for expense amount text field
         else if keyboardType == .decimalPad {
             if string.rangeOfCharacter(from: CharacterSet.letters) != nil
                 {
@@ -123,11 +125,12 @@ class ExpensesViewController: UIViewController, UITextFieldDelegate {
         expense.category = category
         expense.amount = amount
         expense.date = expDate.date
+        expense.accemail = accEmail
         
         // Save the context
         do  {
             try context.save()
-            print("Expense saved.")
+            print("New expense saved for accEmail: \(accEmail)")
             
             let alert = UIAlertController(title: "Successfully added new expense.",
                 message: "You can see the expenses in Category or History tab.",
@@ -172,6 +175,12 @@ class ExpensesViewController: UIViewController, UITextFieldDelegate {
             } catch {
                 print("Failed to play cha-ching sound.")
             }
+        }
+    }
+    
+    @objc private func handleLoginNotification(_ notification: Notification) {
+        if let email = notification.userInfo?["accEmail"] as? String {
+            self.accEmail = email
         }
     }
     

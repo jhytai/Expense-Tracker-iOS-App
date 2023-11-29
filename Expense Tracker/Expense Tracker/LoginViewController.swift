@@ -15,9 +15,19 @@ class LoginViewController: UIViewController
     @IBOutlet weak var passwordTextField : UITextField!
     @IBOutlet var loginSubmit            : UIButton!
     
+    public var accEmail : String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToNext" {
+            if let expensesVC = segue.destination as? ExpensesViewController {
+                expensesVC.accEmail = self.accEmail
+            }
+        }
     }
     
     @IBAction func loginClicked(_ sender: UIButton) {
@@ -36,7 +46,7 @@ class LoginViewController: UIViewController
                 
             } else {
                 self.performSegue(withIdentifier: "goToNext", sender: self)
-                print("Successfully logged in!")
+                print("Successfully logged in as \(self.accEmail)")
                 
                 let alert = UIAlertController(title: "Login Successful.",
                     message: "Welcome to Expense Tracker app.",
@@ -46,6 +56,12 @@ class LoginViewController: UIViewController
                 
             }
         }
+    }
+    
+    @IBAction func emailTextFieldEdited(_ textField: UITextField) {
+        let text = textField.text ?? ""
+        accEmail = String(text)
+        //print("Login email edited to \(accEmail)")
     }
     
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {

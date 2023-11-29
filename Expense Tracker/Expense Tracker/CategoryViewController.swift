@@ -9,11 +9,12 @@ import UIKit
 import CoreData
 
 class CategoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
     private var catPageTitle : UILabel!
     private var tableView    : UITableView!
+    public  var accEmail     : String = ""
     
-    private var expensesByCategory = [String: [ExpenseEntity]]()
+    private var expensesByCategory = [CategoryData]()
     
     // Add a property for the managed object context
     private var context : NSManagedObjectContext!
@@ -30,7 +31,23 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         setupUI()
         fetchData()
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Ensure the accEmail is set correctly getting it from ExpensesViewController
+        if let tabBarControllers = tabBarController?.viewControllers {
+            for viewController in tabBarControllers {
+                if let expensesVC = viewController as? ExpensesViewController {
+                    self.accEmail = expensesVC.accEmail
+                }
+            }
+        }
+        
+        // Reload the data every time the view appears
+        fetchData()
+    }
+    
     private func setupUI() {
         // Initialize Expenses by Category Page Title Label
         self.catPageTitle = UILabel()
@@ -57,7 +74,7 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         self.tableView.dataSource = self
         self.tableView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(tableView)
-
+        
         // Constraints for tableView
         NSLayoutConstraint.activate([
             self.tableView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -69,41 +86,54 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     private func fetchData() {
-        // Fetch data from Core Data and group by category
         let fetchRequest: NSFetchRequest<ExpenseEntity> = ExpenseEntity.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "accemail == %@", accEmail)
+        print("Showing expenses for accEmail: \(accEmail)")
         
         do {
             let expenses = try context.fetch(fetchRequest)
-            self.expensesByCategory = Dictionary(grouping: expenses, by: { $0.category ?? "" })
-            self.tableView.reloadData()
+            let groupedExpenses = Dictionary(grouping: expenses, by: { $0.category ?? "" })
+            expensesByCategory = groupedExpenses.map { (category, expenses) in
+                CategoryData(category: category, expenses: expenses)
+            }
         } catch {
             print("Error fetching data from context \(error)")
+            
+            let alert = UIAlertController(title: "Error: Failed to retrieve expenses.",
+                message: "Failed to retrieve expenses for the account \(accEmail).",
+                preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
     // MARK: - UITableViewDataSource Methods
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return expensesByCategory.keys.count
+        return expensesByCategory.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let category = Array(expensesByCategory.keys)[section]
-        return expensesByCategory[category]?.count ?? 0
+        let categoryData = expensesByCategory[section]
+        return categoryData.expenses.count
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return Array(expensesByCategory.keys)[section]
+        let categoryData = expensesByCategory[section]
+        return "\(categoryData.category) - Subtotal: \(categoryData.subtotal)"
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        let category = Array(expensesByCategory.keys)[indexPath.section]
-        if let expenses = expensesByCategory[category] {
-            let expense = expenses[indexPath.row]
-            cell.textLabel?.text = "\(expense.title ?? "") - \(expense.amount)"
-        }
+        let categoryData = expensesByCategory[indexPath.section]
+        let expense = categoryData.expenses[indexPath.row]
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy" // Adjust the date format as needed
+        let dateString = dateFormatter.string(from: expense.date ?? Date())
+        
+        cell.textLabel?.text = "\(expense.title ?? "")\n    \(dateString) - \(expense.amount)"
+        cell.textLabel?.numberOfLines = 0 // Allow for multiple lines
         
         return cell
     }
