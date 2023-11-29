@@ -12,6 +12,7 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
 
     private var catPageTitle : UILabel!
     private var tableView    : UITableView!
+    public  var accEmail     : String = ""
     
     private var expensesByCategory = [String: [ExpenseEntity]]()
     
@@ -30,7 +31,14 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         setupUI()
         fetchData()
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Reload the data every time the view appears
+        fetchData()
+    }
+    
     private func setupUI() {
         // Initialize Expenses by Category Page Title Label
         self.catPageTitle = UILabel()
@@ -71,6 +79,7 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
     private func fetchData() {
         // Fetch data from Core Data and group by category
         let fetchRequest: NSFetchRequest<ExpenseEntity> = ExpenseEntity.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "accemail == %@", accEmail)
         
         do {
             let expenses = try context.fetch(fetchRequest)
@@ -78,6 +87,12 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
             self.tableView.reloadData()
         } catch {
             print("Error fetching data from context \(error)")
+            
+            let alert = UIAlertController(title: "Error: Failed to retrieve expenses.",
+                message: "Failed to retrieve expenses for the account \(accEmail).",
+                preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
     }
     

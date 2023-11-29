@@ -23,6 +23,7 @@ class ExpensesViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var submitButton     : UIButton!
     
     private   var audioPlayer      : AVAudioPlayer!
+    public    var accEmail         : String = ""
     
     let numberFormatter: NumberFormatter = {
         let nf = NumberFormatter()
@@ -34,7 +35,15 @@ class ExpensesViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        // Pass accEmail to CategoryViewController
+        if let tabBarControllers = self.tabBarController?.viewControllers {
+            for viewController in tabBarControllers {
+                if let categoryVC = viewController as? CategoryViewController {
+                    categoryVC.accEmail = self.accEmail
+                }
+            }
+        }
     }
     
     // Function to control and validate changes to Rounds Text Input Field
@@ -123,6 +132,7 @@ class ExpensesViewController: UIViewController, UITextFieldDelegate {
         expense.category = category
         expense.amount = amount
         expense.date = expDate.date
+        expense.accemail = accEmail
         
         // Save the context
         do  {
