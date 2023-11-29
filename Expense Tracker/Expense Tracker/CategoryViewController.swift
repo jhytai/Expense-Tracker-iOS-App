@@ -30,6 +30,8 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         
         setupUI()
         fetchData()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(fetchData), name: NSNotification.Name("NewExpenseAdded"), object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -85,7 +87,7 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         ])
     }
     
-    private func fetchData() {
+    @objc private func fetchData() {
         let fetchRequest: NSFetchRequest<ExpenseEntity> = ExpenseEntity.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "accemail == %@", accEmail)
         print("Showing expenses for accEmail: \(accEmail)")
@@ -105,6 +107,8 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
+        
+        self.tableView.reloadData()
     }
     
     // MARK: - UITableViewDataSource Methods
@@ -144,4 +148,7 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         // Handle selection for detail view if necessary
     }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
 }

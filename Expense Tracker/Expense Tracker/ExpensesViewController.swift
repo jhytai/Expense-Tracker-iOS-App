@@ -132,6 +132,8 @@ class ExpensesViewController: UIViewController, UITextFieldDelegate {
             try context.save()
             print("New expense saved for accEmail: \(accEmail)")
             
+            NotificationCenter.default.post(name: NSNotification.Name("NewExpenseAdded"), object: nil)
+            
             let alert = UIAlertController(title: "Successfully added new expense.",
                 message: "You can see the expenses in Category or History tab.",
                 preferredStyle: .alert)
