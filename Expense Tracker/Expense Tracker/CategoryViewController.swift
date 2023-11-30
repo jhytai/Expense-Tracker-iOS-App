@@ -10,14 +10,14 @@ import CoreData
 
 class CategoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    private var catPageTitle : UILabel!
-    private var tableView    : UITableView!
-    public  var accEmail     : String = ""
+    private var catPageTitle: UILabel!
+    private var tableView: UITableView!
+    public var accEmail: String = ""
     
     private var expensesByCategory = [CategoryData]()
     
     // Add a property for the managed object context
-    private var context : NSManagedObjectContext!
+    private var context: NSManagedObjectContext!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +26,7 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         
         // Get the managed object context
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            fatalError("Unable to access AppDelegate")
+            fatalError(NSLocalizedString("Unable to access AppDelegate", comment: "Error message"))
         }
         context = appDelegate.persistentContainer.viewContext
         
@@ -44,7 +44,7 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
     private func setupUI() {
         // Initialize Expenses by Category Page Title Label
         self.catPageTitle = UILabel()
-        self.catPageTitle.text = "Expenses by Category"
+        self.catPageTitle.text = NSLocalizedString("Expenses by Category", comment: "Category view page title")
         self.catPageTitle.font = UIFont.systemFont(ofSize: 28)
         self.catPageTitle.numberOfLines = 0
         self.catPageTitle.lineBreakMode = .byWordWrapping
@@ -92,10 +92,12 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         } catch {
             print("Error fetching data from context \(error)")
             
-            let alert = UIAlertController(title: "Error: Failed to retrieve expenses.",
-                message: "Failed to retrieve expenses for the account \(accEmail).",
-                preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            let alert = UIAlertController(
+                title: NSLocalizedString("Error: Failed to retrieve expenses.", comment: "Error title"),
+                message: String(format: NSLocalizedString("Failed to retrieve expenses for the account %@", comment: "Error message"), accEmail),
+                preferredStyle: .alert
+            )
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "OK"), style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
         
@@ -116,6 +118,7 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let categoryData = expensesByCategory[section]
         return "\(categoryData.category) - Subtotal: \(categoryData.subtotal)"
+
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -124,7 +127,7 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         let categoryData = expensesByCategory[indexPath.section]
         let expense = categoryData.expenses[indexPath.row]
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM/dd/yyyy" // Adjust the date format as needed
+        dateFormatter.dateFormat = NSLocalizedString("MM/dd/yyyy", comment: "Date format") // Adjust the date format as needed
         let dateString = dateFormatter.string(from: expense.date ?? Date())
         
         cell.textLabel?.text = "\(expense.title ?? "")\n    \(dateString) - \(expense.amount)"
@@ -168,5 +171,4 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // Handle selection for detail view if necessary
     }
-    
 }
