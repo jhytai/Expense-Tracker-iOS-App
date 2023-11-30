@@ -24,6 +24,7 @@
 		0DAD8CFE2B13D6BE0042BB9F /* cha ching.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0DAD8CFD2B13D6BD0042BB9F /* cha ching.mp3 */; };
 		304966E82B18044400CE8045 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304966E72B18044400CE8045 /* Global.swift */; };
 		30975BB72B17BD970077E878 /* CategoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30975BB62B17BD970077E878 /* CategoryData.swift */; };
+		30C889C82B182496000933EE /* APIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C889C72B182496000933EE /* APIViewController.swift */; };
 		30D11E0D2B15611B00F0CC8C /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D11E0C2B15611B00F0CC8C /* CategoryViewController.swift */; };
 		30F065EE2B1353A200E1192D /* ExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F065ED2B1353A200E1192D /* ExpensesViewController.swift */; };
 		30F065F02B1353BA00E1192D /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F065EF2B1353BA00E1192D /* HistoryViewController.swift */; };
@@ -67,6 +68,7 @@
 		0DAD8CFD2B13D6BD0042BB9F /* cha ching.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "cha ching.mp3"; sourceTree = "<group>"; };
 		304966E72B18044400CE8045 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		30975BB62B17BD970077E878 /* CategoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryData.swift; sourceTree = "<group>"; };
+		30C889C72B182496000933EE /* APIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIViewController.swift; sourceTree = "<group>"; };
 		30D11E0C2B15611B00F0CC8C /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		30F065ED2B1353A200E1192D /* ExpensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesViewController.swift; sourceTree = "<group>"; };
 		30F065EF2B1353BA00E1192D /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				30F065ED2B1353A200E1192D /* ExpensesViewController.swift */,
 				30D11E0C2B15611B00F0CC8C /* CategoryViewController.swift */,
 				30F065EF2B1353BA00E1192D /* HistoryViewController.swift */,
+				30C889C72B182496000933EE /* APIViewController.swift */,
 				0A6D62D52B074253003F869A /* Assets.xcassets */,
 				0DAD8CFD2B13D6BD0042BB9F /* cha ching.mp3 */,
 				0A6D62DA2B074253003F869A /* Info.plist */,
@@ -325,6 +328,7 @@
 				0A6D62CF2B074252003F869A /* SceneDelegate.swift in Sources */,
 				30D11E0D2B15611B00F0CC8C /* CategoryViewController.swift in Sources */,
 				30F065EE2B1353A200E1192D /* ExpensesViewController.swift in Sources */,
+				30C889C82B182496000933EE /* APIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
