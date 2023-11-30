@@ -424,7 +424,7 @@
                         <viewLayoutGuide key="safeArea" id="UfG-4i-sK8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="API" id="mS0-3F-JcG"/>
+                    <tabBarItem key="tabBarItem" title="API" image="arrow.down.doc.fill" catalog="system" id="mS0-3F-JcG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dB4-Hw-IYE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -491,6 +491,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="ExpenseLogo" width="211" height="211"/>
+        <image name="arrow.down.doc.fill" catalog="system" width="115" height="128"/>
         <image name="dollarsign" catalog="system" width="89" height="128"/>
         <image name="list.bullet.clipboard.fill" catalog="system" width="98" height="128"/>
         <image name="list.bullet.indent" catalog="system" width="128" height="73"/>
