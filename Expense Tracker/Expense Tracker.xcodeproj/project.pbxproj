@@ -22,6 +22,7 @@
 		0AB3B1AF2B0E02EB0071598D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0AB3B1AE2B0E02EB0071598D /* GoogleService-Info.plist */; };
 		0AB3B1B22B0E03EF0071598D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0AB3B1B12B0E03EF0071598D /* FirebaseAuth */; };
 		0DAD8CFE2B13D6BE0042BB9F /* cha ching.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0DAD8CFD2B13D6BD0042BB9F /* cha ching.mp3 */; };
+		304966E82B18044400CE8045 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304966E72B18044400CE8045 /* Global.swift */; };
 		30975BB72B17BD970077E878 /* CategoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30975BB62B17BD970077E878 /* CategoryData.swift */; };
 		30D11E0D2B15611B00F0CC8C /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D11E0C2B15611B00F0CC8C /* CategoryViewController.swift */; };
 		30F065EE2B1353A200E1192D /* ExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F065ED2B1353A200E1192D /* ExpensesViewController.swift */; };
@@ -64,6 +65,7 @@
 		0AB3B1AC2B0DFED70071598D /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		0AB3B1AE2B0E02EB0071598D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0DAD8CFD2B13D6BD0042BB9F /* cha ching.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "cha ching.mp3"; sourceTree = "<group>"; };
+		304966E72B18044400CE8045 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		30975BB62B17BD970077E878 /* CategoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryData.swift; sourceTree = "<group>"; };
 		30D11E0C2B15611B00F0CC8C /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		30F065ED2B1353A200E1192D /* ExpensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesViewController.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				30975BB62B17BD970077E878 /* CategoryData.swift */,
+				304966E72B18044400CE8045 /* Global.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				0AB3B1AB2B0DFD880071598D /* LoginViewController.swift in Sources */,
 				0A6D62D12B074252003F869A /* ViewController.swift in Sources */,
 				0A1C2B402B13FF310010512A /* UserDB.xcdatamodeld in Sources */,
+				304966E82B18044400CE8045 /* Global.swift in Sources */,
 				0A6D62CD2B074252003F869A /* AppDelegate.swift in Sources */,
 				0A6D62CF2B074252003F869A /* SceneDelegate.swift in Sources */,
 				30D11E0D2B15611B00F0CC8C /* CategoryViewController.swift in Sources */,
