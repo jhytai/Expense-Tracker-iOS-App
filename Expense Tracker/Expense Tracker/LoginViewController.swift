@@ -22,14 +22,6 @@ class LoginViewController: UIViewController
         // Do any additional setup after loading the view.
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToNext" {
-            if let expensesVC = segue.destination as? ExpensesViewController {
-                expensesVC.accEmail = self.accEmail
-            }
-        }
-    }
-    
     @IBAction func loginClicked(_ sender: UIButton) {
         guard let email = emailTextField.text else { return }
         guard let password = passwordTextField.text else { return }
@@ -54,6 +46,7 @@ class LoginViewController: UIViewController
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
                 
+                Global.accEmail = self.emailTextField.text ?? ""
             }
         }
     }
@@ -61,7 +54,6 @@ class LoginViewController: UIViewController
     @IBAction func emailTextFieldEdited(_ textField: UITextField) {
         let text = textField.text ?? ""
         accEmail = String(text)
-        //print("Login email edited to \(accEmail)")
     }
     
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {

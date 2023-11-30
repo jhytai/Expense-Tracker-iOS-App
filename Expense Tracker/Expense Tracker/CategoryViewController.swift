@@ -22,6 +22,8 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.accEmail = Global.accEmail
+        
         // Get the managed object context
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             fatalError("Unable to access AppDelegate")
@@ -30,21 +32,10 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         
         setupUI()
         fetchData()
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(fetchData), name: NSNotification.Name("NewExpenseAdded"), object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        // Ensure the accEmail is set correctly getting it from ExpensesViewController
-        if let tabBarControllers = tabBarController?.viewControllers {
-            for viewController in tabBarControllers {
-                if let expensesVC = viewController as? ExpensesViewController {
-                    self.accEmail = expensesVC.accEmail
-                }
-            }
-        }
         
         // Reload the data every time the view appears
         fetchData()
@@ -178,7 +169,4 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         // Handle selection for detail view if necessary
     }
     
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
 }

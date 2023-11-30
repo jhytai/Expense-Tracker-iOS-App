@@ -36,15 +36,8 @@ class ExpensesViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Pass accEmail to CategoryViewController
-        if let tabBarControllers = self.tabBarController?.viewControllers {
-            for viewController in tabBarControllers {
-                if let categoryVC = viewController as? CategoryViewController {
-                    categoryVC.accEmail = self.accEmail
-                }
-            }
-        }
-        
+        self.accEmail = Global.accEmail
+        print("Received accEmail from Login: \(accEmail)")
     }
     
     // Function to control and validate changes to Rounds Text Input Field
@@ -177,12 +170,6 @@ class ExpensesViewController: UIViewController, UITextFieldDelegate {
             } catch {
                 print("Failed to play cha-ching sound.")
             }
-        }
-    }
-    
-    @objc private func handleLoginNotification(_ notification: Notification) {
-        if let email = notification.userInfo?["accEmail"] as? String {
-            self.accEmail = email
         }
     }
     
