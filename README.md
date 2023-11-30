@@ -1,10 +1,10 @@
-# CPSC 411 - Midterm Project #
+# CPSC 411 - Final Project #
 
 This is our submission for the Final Project.
 
 ## Project and Team Information ##
 
-* Project: Expenses Tracker app
+* Project: Expense Tracker mobile app for iOS
 * Institution: California State University Fullerton (CSUF)
 * Course: CPSC 411 - Mobile Device Application Programming (Fall 2023, Section 03, 13849)
 * Team Name: iCode_Duology_4x
