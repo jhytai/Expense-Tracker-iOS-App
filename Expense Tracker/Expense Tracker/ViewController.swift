@@ -33,6 +33,7 @@ class ViewController: UIViewController {
     
     @IBAction func logoTapped (_sender: UITapGestureRecognizer) {
         print("Expense Tracker's logo tapped!")
+        changeImage()
         blinkLogo()
         playAudio()
     }
@@ -72,4 +73,11 @@ class ViewController: UIViewController {
         }
     }
     
+    private func changeImage() {
+        if appLogoImage.image == UIImage(named: "ExpenseLogov2") {
+            appLogoImage.image = UIImage(named: "ExpenseLogo")
+        } else {
+            appLogoImage.image = UIImage(named: "ExpenseLogov2")
+        }
+    }
 }
