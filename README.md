@@ -36,8 +36,8 @@ This is our submission for the Final Project.
 - [x] Expenses input page
 - [x] Expenses by Category viewer page
 - [x] Expenses History viewer page
-- [ ] Double-check project requirements
-- [ ] Testament Document
+- [x] Double-check project requirements
+- [x] Testament Document
 
 ## Project Requirements ##
 
@@ -55,13 +55,13 @@ This is our submission for the Final Project.
 
 	- Your app must use at least two different types of software keyboards. Your app must also detect the type of the keyboard at some point and use it to filter the user’s invalid character input.
 
-- [ ] Internationalization and Localization
+- [x] Internationalization and Localization
 
 	- Your app must be prepared for internationalization and localized to at least two languages (aside from English), and two total regions. The regions must use different decimal separators or some other significant aspect that can be demonstrated in class.
 	- This should include translations both for the Storyboard and internal strings using NSLocalizedString.
 	- Example: English/US, Spanish/Spain, French/France.
 
-- [ ] RESTful Interactivity
+- [x] RESTful Interactivity
 
 	- The app should communicate with a RESTful API server using the classes **URLSession**,
 **URLRequest**, **Codable**, **JSONDecoder**, etc, as well as the URLSession’s data task, dedicated data classes, and so forth.
@@ -69,7 +69,7 @@ This is our submission for the Final Project.
 	- When the user exits and relaunches the app, data previously sent to the remote API should be fetched from the remote API and shown to the user. The previously sent data should not be saved using local persistence, but fetched from the live server instead, to prove the app is “cloudified” in some way.
 	- You may choose to use an existing API or create one yourself, as long as your app is able to both create data on the remote server, and fetch those records.
 
-- [ ] Persistent settings
+- [x] Persistent settings
 
 	- Your app should allow the user to save settings within the app using the **UserDefaults** class. The settings should persist after the app is exited and relaunched. You may choose any data you’d like for these settings, but your app should have at least two.
 
