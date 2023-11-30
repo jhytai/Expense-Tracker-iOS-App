@@ -117,7 +117,8 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let categoryData = expensesByCategory[section]
-        return String(format: NSLocalizedString("%@ - Subtotal: %@", comment: "Section header format"), categoryData.category, categoryData.subtotal)
+        return "\(categoryData.category) - Subtotal: \(categoryData.subtotal)"
+
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -129,7 +130,7 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         dateFormatter.dateFormat = NSLocalizedString("MM/dd/yyyy", comment: "Date format") // Adjust the date format as needed
         let dateString = dateFormatter.string(from: expense.date ?? Date())
         
-        cell.textLabel?.text = String(format: NSLocalizedString("%@ \n    %@ - %@", comment: "Cell text format"), expense.title ?? "", dateString, expense.amount)
+        cell.textLabel?.text = "\(expense.title ?? "")\n    \(dateString) - \(expense.amount)"
         cell.textLabel?.numberOfLines = 0 // Allow for multiple lines
         
         return cell
