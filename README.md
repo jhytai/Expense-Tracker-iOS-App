@@ -35,7 +35,7 @@ This is our submission for the Final Project.
 - [x] Login & Create Acc pages (Google firebase authentication)
 - [x] Expenses input page
 - [x] Expenses by Category viewer page
-- [ ] Expenses History viewer page
+- [x] Expenses History viewer page
 - [ ] Double-check project requirements
 - [ ] Testament Document
 
@@ -45,7 +45,7 @@ This is our submission for the Final Project.
 
 	- At least one View should be created, setup, and constrained programmatically. If you wish to code your entire app using API Based User Interface and avoid Storyboard altogether, you may do so. But only if you wish.
 
-- [ ] Interactive Assets
+- [x] Interactive Assets
 
 	- Your app should have at least two distinct assets utilized within the Storyboard/scene, somewhere.
 	- The user should be able to cause at least one of the resources to change via interaction (i.e., callback). Example: UIImageView holding a custom image for your app, which changes when the user clicks some button (or when the user has changed something, somewhere).
@@ -73,7 +73,7 @@ This is our submission for the Final Project.
 
 	- Your app should allow the user to save settings within the app using the **UserDefaults** class. The settings should persist after the app is exited and relaunched. You may choose any data you’d like for these settings, but your app should have at least two.
 
-- [ ] File persistence
+- [x] File persistence
 
 	- Your app should have the ability to save files. At least one area of the app should save some sort of file (image file, text data file, internet download, etc), and have the ability to view or recall those files across app restarts.
 	- Your app should also utilize file caching in at least one area. One good example for this would match our slideshow, where an image is downloaded from the internet and saved to cache, then subsequent accesses of that images are pulled from the cache rather than the internet.
