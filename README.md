@@ -31,16 +31,17 @@ This is our submission for the Final Project.
 
 ## Development Milestones ##
 
-- [ ] Landing Page
-- [ ] ???
-- [ ] ???
-- [ ] ???
-- [ ] Internationalization
+- [x] Launching & Landing pages
+- [x] Login & Create Acc pages (Google firebase authentication)
+- [x] Expenses input page
+- [x] Expenses by Category viewer page
+- [ ] Expenses History viewer page
+- [ ] Double-check project requirements
 - [ ] Testament Document
 
 ## Project Requirements ##
 
-- [ ] API Based User Interface
+- [x] API Based User Interface
 
 	- At least one View should be created, setup, and constrained programmatically. If you wish to code your entire app using API Based User Interface and avoid Storyboard altogether, you may do so. But only if you wish.
 
@@ -50,7 +51,7 @@ This is our submission for the Final Project.
 	- The user should be able to cause at least one of the resources to change via interaction (i.e., callback). Example: UIImageView holding a custom image for your app, which changes when the user clicks some button (or when the user has changed something, somewhere).
 	- At least one asset should change/adapt based on device configuration or other qualifier. Example: Logo that changes depending on screen size or orientation or whether the app runs on an iPhone/iPad.
 
-- [ ] Text Input and Delegation
+- [x] Text Input and Delegation
 
 	- Your app must use at least two different types of software keyboards. Your app must also detect the type of the keyboard at some point and use it to filter the user’s invalid character input.
 
@@ -77,11 +78,11 @@ This is our submission for the Final Project.
 	- Your app should have the ability to save files. At least one area of the app should save some sort of file (image file, text data file, internet download, etc), and have the ability to view or recall those files across app restarts.
 	- Your app should also utilize file caching in at least one area. One good example for this would match our slideshow, where an image is downloaded from the internet and saved to cache, then subsequent accesses of that images are pulled from the cache rather than the internet.
 
-- [ ] Database persistence
+- [x] Database persistence
 
 	- Your app should allow the user to save items to a local SQLite database, utilizing **Core Data**. The user should be able to save an unlimited number of these items, and view them somehow. The data should survive across app exits.
 	- This requirement may be tweaked slightly the week before presentations or converted to extra credit, if needed.
 
-- [ ] Clear Separation of Concerns (MVC)
+- [x] Clear Separation of Concerns (MVC)
 
 	- Your code has been decoupled and separated into Model / View / Controller modules. Models appear in a separate folder/directory.
