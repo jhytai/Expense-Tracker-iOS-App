@@ -1,0 +1,90 @@
+
+/* Class = "UITextField"; placeholder = "Enter Password"; ObjectID = "0DW-Sx-jJb"; */
+"0DW-Sx-jJb.placeholder" = "Entre la Contraseña";
+
+/* Class = "UILabel"; text = "Expense Title"; ObjectID = "0cB-IZ-onq"; */
+"0cB-IZ-onq.text" = "Título de los Gastos";
+
+/* Class = "UITextField"; placeholder = "Enter Email Address"; ObjectID = "1Kq-ZU-Bnn"; */
+"1Kq-ZU-Bnn.placeholder" = "Entre el Correo Electronico";
+
+/* Class = "UILabel"; text = "Amount"; ObjectID = "8cc-0w-FJs"; */
+"8cc-0w-FJs.text" = "Cantidad";
+
+/* Class = "UITabBarItem"; title = "Expenses"; ObjectID = "8w7-mV-9Yy"; */
+"8w7-mV-9Yy.title" = "Gastos";
+
+/* Class = "UIViewController"; title = "RESTful API"; ObjectID = "9QK-FD-5VI"; */
+"9QK-FD-5VI.title" = "RESTful API";
+
+/* Class = "UITabBarItem"; title = "Category"; ObjectID = "CVZ-Iv-DrF"; */
+"CVZ-Iv-DrF.title" = "Categoria";
+
+/* Class = "UITextField"; placeholder = "Enter Email Address"; ObjectID = "Cfe-lG-Kn2"; */
+"Cfe-lG-Kn2.placeholder" = "Entre el Correo Electronico";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "H9J-2P-otv"; */
+"H9J-2P-otv.title" = "Articulo";
+
+/* Class = "UILabel"; text = "Add Expense"; ObjectID = "Jra-bw-dLw"; */
+"Jra-bw-dLw.text" = "Añada Gasto";
+
+/* Class = "UIButton"; configuration.title = "Login"; ObjectID = "Lgb-W6-ZtJ"; */
+"Lgb-W6-ZtJ.configuration.title" = "Entrar";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Lgb-W6-ZtJ"; */
+"Lgb-W6-ZtJ.normalTitle" = "Botón";
+
+/* Class = "UIBarButtonItem"; title = "Login"; ObjectID = "Nqg-H0-iXF"; */
+"Nqg-H0-iXF.title" = "Entrar";
+
+/* Class = "UIButton"; configuration.title = "Create Account"; ObjectID = "Q7h-IR-T1v"; */
+"Q7h-IR-T1v.configuration.title" = "Crear Cuenta";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Q7h-IR-T1v"; */
+"Q7h-IR-T1v.normalTitle" = "Botón";
+
+/* Class = "UILabel"; text = "Category"; ObjectID = "Sb8-bO-YVM"; */
+"Sb8-bO-YVM.text" = "Categoria";
+
+/* Class = "UIButton"; configuration.title = "Login"; ObjectID = "bBi-eW-SAf"; */
+"bBi-eW-SAf.configuration.title" = "Entrar";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "bBi-eW-SAf"; */
+"bBi-eW-SAf.normalTitle" = "Botón";
+
+/* Class = "UILabel"; text = "Expense Tracker"; ObjectID = "gi1-Uw-9Hr"; */
+"gi1-Uw-9Hr.text" = "Rastreador de Gastos";
+
+/* Class = "UITextField"; placeholder = "your expense category"; ObjectID = "iZJ-yv-hz0"; */
+"iZJ-yv-hz0.placeholder" = "la categoria de tu gasto";
+
+/* Class = "UIButton"; configuration.title = "Submit Expense"; ObjectID = "lVy-4Q-O6H"; */
+"lVy-4Q-O6H.configuration.title" = "Entrar Gasto";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "lVy-4Q-O6H"; */
+"lVy-4Q-O6H.normalTitle" = "Botón";
+
+/* Class = "UITextField"; placeholder = "Enter Password"; ObjectID = "lal-Gn-nL3"; */
+"lal-Gn-nL3.placeholder" = "Entrar Contraseña";
+
+/* Class = "UITabBarItem"; title = "API"; ObjectID = "mS0-3F-JcG"; */
+"mS0-3F-JcG.title" = "API";
+
+/* Class = "UITabBarItem"; title = "History"; ObjectID = "n1P-q6-hm1"; */
+"n1P-q6-hm1.title" = "Historia";
+
+/* Class = "UILabel"; text = "Date"; ObjectID = "nUJ-H7-0Cn"; */
+"nUJ-H7-0Cn.text" = "Fecha";
+
+/* Class = "UITextField"; placeholder = "your expense amount"; ObjectID = "nwt-og-8KO"; */
+"nwt-og-8KO.placeholder" = "la cantidad de tu gasto";
+
+/* Class = "UIButton"; configuration.title = "Create Account"; ObjectID = "rLQ-Fu-Awc"; */
+"rLQ-Fu-Awc.configuration.title" = "Crear Cuenta";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "rLQ-Fu-Awc"; */
+"rLQ-Fu-Awc.normalTitle" = "Botón";
+
+/* Class = "UITextField"; placeholder = "your expense title"; ObjectID = "tel-Ig-tJ6"; */
+"tel-Ig-tJ6.placeholder" = "el titulo de tu gasto";
