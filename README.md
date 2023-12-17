@@ -10,20 +10,16 @@ This is our submission for the Final Project.
 * Team Name: iCode_Duology_4x
 
 	* Name: Josue Han Yan Tai Liu
-		* CWID: 885540690
 		* Email: josue.tai@csu.fullerton.edu
 
 	* Name: Maria Fernandez
-		* CWID: 887569838
 		* Email: mariaibis@csu.fullerton.edu
 
 	* Name: Danyal Nemati
-		* CWID: 886736347
 		* Email: dnemati@csu.fullerton.edu
 
 	* Name: Indrajeet Patwardhan
-		* CWID: 886908821
-		* Email: Indrajeet2002@csu.fullerton.edu
+		* Email: indrajeet2002@csu.fullerton.edu
 
 ## Notes ##
 
